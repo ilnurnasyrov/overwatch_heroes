@@ -20,43 +20,42 @@ def it_behaves_like_hero_repo(hero_repo)
       real_name: "SST Laboratories Siege Automaton E54",
     )
 
-    hero_repo.add_or_update_by_id(first_hero)
-    hero_repo.add_or_update_by_id(second_hero)
+    hero_repo.replace_all_by([first_hero, second_hero])
 
     expect(
-      hero_repo.get_by_id(1)
+      hero_repo.find_by_id(1)
     ).to eq(first_hero)
 
-    hero_repo.add_or_update_by_id(updated_first_hero)
+    hero_repo.replace_all_by([second_hero, updated_first_hero])
 
     expect(
-      hero_repo.get_by_id(1)
+      hero_repo.find_by_id(1)
     ).to eq(updated_first_hero)
 
     expect(
-      hero_repo.get_all_by(page: 1, per: 1)
+      hero_repo.paginate(page: 1, per: 1)
     ).to eq(
       data: [updated_first_hero],
       page: 1,
-      last_page: 2,
+      per: 1,
       total: 2
     )
 
     expect(
-      hero_repo.get_all_by(page: 1, per: 2)
+      hero_repo.paginate(page: 1, per: 2)
     ).to eq(
       data: [updated_first_hero, second_hero],
       page: 1,
-      last_page: 1,
+      per: 2,
       total: 2
     )
 
     expect(
-      hero_repo.get_all_by(page: 2, per: 1)
+      hero_repo.paginate(page: 2, per: 1)
     ).to eq(
       data: [second_hero],
       page: 2,
-      last_page: 2,
+      per: 1,
       total: 2
     )
   end

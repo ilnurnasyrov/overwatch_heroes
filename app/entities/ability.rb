@@ -6,7 +6,6 @@ class Ability < Entity
   attribute :name, Types::Strict::String
   attribute :description, Types::Strict::String
   attribute :is_ultimate, Types::Strict::Bool
-  attribute :version, Types::Integer.optional.default(nil)
 
   attribute :hero, Hero.optional.default(nil)
 end

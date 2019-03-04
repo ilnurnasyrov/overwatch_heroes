@@ -7,7 +7,6 @@ class Hero < Entity
   attribute :name, Types::Strict::String
   attribute :real_name, Types::Strict::String
   attribute :shield, Types::Strict::Integer
-  attribute :version, Types::Integer.optional.default(nil)
 
   # Hack that allows to use Hero inside of Ability
   require_relative "ability"

@@ -1,6 +1,6 @@
-require "entities/hero"
+require "entities/ability"
 
-class MemoryHeroRepo
+class MemoryAbilityRepo
   def initialize
     @heroes = {}
   end
@@ -12,7 +12,7 @@ class MemoryHeroRepo
       if hero
         hero.changed(hero_attributes)
       else
-        Hero.new(hero_attributes)
+        Ability.new(hero_attributes)
       end
 
     heroes[hero.id] = hero
