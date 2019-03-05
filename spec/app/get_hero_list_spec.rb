@@ -7,6 +7,14 @@ RSpec.describe GetHeroList do
 
   before { hero_repo.replace_all_by([first_hero, second_hero]) }
 
-  it "returns paginated collection" do
+  it "returns paginated collection of heroes" do
+    result = get_hero_list.call(page: 2, per: 1)
+
+    expect(result).to eq Paginated.new(
+      collection: [second_hero],
+      page: 2,
+      per: 1,
+      total: 2,
+    )
   end
 end

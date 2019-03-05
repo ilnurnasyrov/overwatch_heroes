@@ -2,7 +2,7 @@ require "struct/paginated"
 
 class ARHeroRepo
   def transaction(&block)
-    AR::Hero.transaction(&block)
+    AR::Hero.with_advisory_lock("ar_heroes_update", &block)
   end
 
   def replace_all_by(heroes)
