@@ -34,7 +34,7 @@ module OverwatchHeroes
 
     config.paths["app"] = "ui"
     config.paths["app/controllers"] = "ui/controllers"
-    config.paths["app/models"] = "data/repositories/ar"
+    config.paths["app/models"] = "data/ar"
     config.paths["db"] = "data/db"
     config.paths["db/migrate"] = "data/db/migrate"
     config.paths["db/seeds.rb"] = "data/db/seeds.rb"
@@ -52,8 +52,8 @@ module OverwatchHeroes
       "app/providers",
       "app/use_cases",
 
-      "data/repositories",
-      "data/services",
+      "data",
+      "data/ar",
 
       "lib",
       "lib/services",
