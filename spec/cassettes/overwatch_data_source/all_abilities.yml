@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 05 Mar 2019 00:21:28 GMT
+      - Tue, 05 Mar 2019 01:32:40 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -27,8 +27,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d84bda0c08f2e644d1ea46af23b2f0da71551745287; expires=Wed, 04-Mar-20
-        00:21:27 GMT; path=/; domain=.overwatch-api.net; HttpOnly
+      - __cfduid=d3c72a81a9a5dca8d799fd38bb24d12a01551749560; expires=Wed, 04-Mar-20
+        01:32:40 GMT; path=/; domain=.overwatch-api.net; HttpOnly
       Cache-Control:
       - no-cache, private
       Access-Control-Allow-Origin:
@@ -38,13 +38,13 @@ http_interactions:
       X-Ratelimit-Limit:
       - '500'
       X-Ratelimit-Remaining:
-      - '494'
+      - '498'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 4b27ee10fe42c3e5-LED
+      - 4b285662dff4c421-LED
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -1158,7 +1158,7 @@ http_interactions:
             ]
         }
     http_version: 
-  recorded_at: Tue, 05 Mar 2019 00:21:23 GMT
+  recorded_at: Tue, 05 Mar 2019 01:32:36 GMT
 - request:
     method: get
     uri: http://overwatch-api.net/api/v1/ability?page=2
@@ -1178,7 +1178,7 @@ http_interactions:
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 05 Mar 2019 00:21:28 GMT
+      - Tue, 05 Mar 2019 01:32:41 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -1186,7 +1186,7 @@ http_interactions:
       Cache-Control:
       - max-age=3600
       Expires:
-      - Tue, 05 Mar 2019 01:21:28 GMT
+      - Tue, 05 Mar 2019 02:32:41 GMT
       Location:
       - https://overwatch-api.net/api/v1/ability?page=2
       Vary:
@@ -1194,12 +1194,12 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 4b27ee12eabbc3e0-LED
+      - 4b2856645ce9c3f4-LED
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 05 Mar 2019 00:21:23 GMT
+  recorded_at: Tue, 05 Mar 2019 01:32:36 GMT
 - request:
     method: get
     uri: https://overwatch-api.net/api/v1/ability?page=2
@@ -1219,7 +1219,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 05 Mar 2019 00:21:28 GMT
+      - Tue, 05 Mar 2019 01:32:41 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1227,8 +1227,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d03342b59bfafeb4258768f1faa1b29e51551745288; expires=Wed, 04-Mar-20
-        00:21:28 GMT; path=/; domain=.overwatch-api.net; HttpOnly
+      - __cfduid=d657ce53b7a98d938840dd728e6a1dfc11551749561; expires=Wed, 04-Mar-20
+        01:32:41 GMT; path=/; domain=.overwatch-api.net; HttpOnly
       Cache-Control:
       - no-cache, private
       Access-Control-Allow-Origin:
@@ -1238,13 +1238,13 @@ http_interactions:
       X-Ratelimit-Limit:
       - '500'
       X-Ratelimit-Remaining:
-      - '493'
+      - '497'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 4b27ee131d68c408-LED
+      - 4b2856648dc5c408-LED
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -2358,7 +2358,7 @@ http_interactions:
             ]
         }
     http_version: 
-  recorded_at: Tue, 05 Mar 2019 00:21:23 GMT
+  recorded_at: Tue, 05 Mar 2019 01:32:36 GMT
 - request:
     method: get
     uri: http://overwatch-api.net/api/v1/ability?page=3
@@ -2378,7 +2378,7 @@ http_interactions:
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 05 Mar 2019 00:21:28 GMT
+      - Tue, 05 Mar 2019 01:32:41 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -2386,7 +2386,7 @@ http_interactions:
       Cache-Control:
       - max-age=3600
       Expires:
-      - Tue, 05 Mar 2019 01:21:28 GMT
+      - Tue, 05 Mar 2019 02:32:41 GMT
       Location:
       - https://overwatch-api.net/api/v1/ability?page=3
       Vary:
@@ -2394,12 +2394,12 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 4b27ee14c89fc3ea-LED
+      - 4b2856662d4fc3e0-LED
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 05 Mar 2019 00:21:23 GMT
+  recorded_at: Tue, 05 Mar 2019 01:32:36 GMT
 - request:
     method: get
     uri: https://overwatch-api.net/api/v1/ability?page=3
@@ -2419,7 +2419,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 05 Mar 2019 00:21:28 GMT
+      - Tue, 05 Mar 2019 01:32:41 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -2427,8 +2427,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=dac8288d59022c92be9a4357b8551fc501551745288; expires=Wed, 04-Mar-20
-        00:21:28 GMT; path=/; domain=.overwatch-api.net; HttpOnly
+      - __cfduid=d6ffb0f0862ac1429df2a8dd96c1235c41551749561; expires=Wed, 04-Mar-20
+        01:32:41 GMT; path=/; domain=.overwatch-api.net; HttpOnly
       Cache-Control:
       - no-cache, private
       Access-Control-Allow-Origin:
@@ -2438,13 +2438,13 @@ http_interactions:
       X-Ratelimit-Limit:
       - '500'
       X-Ratelimit-Remaining:
-      - '495'
+      - '497'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 4b27ee14efc3c3f9-LED
+      - 4b2856665870c426-LED
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -2766,5 +2766,5 @@ http_interactions:
             ]
         }
     http_version: 
-  recorded_at: Tue, 05 Mar 2019 00:21:23 GMT
+  recorded_at: Tue, 05 Mar 2019 01:32:36 GMT
 recorded_with: VCR 4.0.0
