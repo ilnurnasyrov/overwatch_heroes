@@ -1,11 +1,17 @@
 require "overwatch_data_source"
 
 RSpec.describe OverwatchDataSource, type: :integration do
-  it_behaves_like_overwatch_data_source(OverwatchDataSource.new)
+  context do
+    use_cassette "overwatch_data_source/generic"
+
+    it_behaves_like_overwatch_data_source(OverwatchDataSource.new)
+  end
 
   let(:data_source) { OverwatchDataSource.new }
 
   describe "#heroes" do
+    use_cassette "overwatch_data_source/all_heroes"
+
     it "returns enumerable to iterate over all heroes" do
       expect(data_source.heroes).to be_an Enumerable
 
@@ -17,6 +23,8 @@ RSpec.describe OverwatchDataSource, type: :integration do
   end
 
   describe "#abilities" do
+    use_cassette "overwatch_data_source/all_abilities"
+
     it "returns enumerable to iterate over all abilities" do
       expect(data_source.abilities).to be_an Enumerable
 
@@ -29,6 +37,8 @@ RSpec.describe OverwatchDataSource, type: :integration do
 
   describe "Abilities" do
     let(:abilities) { OverwatchDataSource::Abilities.new }
+
+    use_cassette "overwatch_data_source/all_abilities"
 
     describe "#to_a" do
       it "returns collection of Abilities" do
@@ -51,6 +61,8 @@ RSpec.describe OverwatchDataSource, type: :integration do
 
   describe "Heroes" do
     let(:heroes) { OverwatchDataSource::Heroes.new }
+
+    use_cassette "overwatch_data_source/all_heroes"
 
     describe "#to_a" do
       it "returns collection of Heroes" do
