@@ -1,9 +1,5 @@
 class GetAbilityDetails
-  attr_reader :ability_repo
-
-  def initialize(ability_repo:)
-    @ability_repo = ability_repo
-  end
+  include Import[:ability_repo]
 
   def call(id:)
     ability_repo.find_by_id(id)

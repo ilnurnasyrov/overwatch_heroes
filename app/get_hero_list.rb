@@ -1,9 +1,5 @@
 class GetHeroList
-  attr_reader :hero_repo
-
-  def initialize(hero_repo:)
-    @hero_repo = hero_repo
-  end
+  include Import[:hero_repo]
 
   def call(page:, per:)
     hero_repo.paginate(page: page, per: per)

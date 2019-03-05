@@ -1,13 +1,7 @@
 require "entities/hero"
 
 class SynchronizeData
-  attr_reader :hero_repo, :ability_repo, :data_source
-
-  def initialize(hero_repo:, ability_repo:, data_source:)
-    @hero_repo = hero_repo
-    @ability_repo = ability_repo
-    @data_source = data_source
-  end
+  include Import[:hero_repo, :ability_repo, :data_source]
 
   def call
     heroes = data_source.heroes.to_a

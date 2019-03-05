@@ -1,9 +1,5 @@
 class GetHeroDetails
-  attr_reader :hero_repo
-
-  def initialize(hero_repo:)
-    @hero_repo = hero_repo
-  end
+  include Import[:hero_repo]
 
   def call(id:)
     hero_repo.find_by_id(id)

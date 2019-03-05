@@ -40,26 +40,18 @@ module OverwatchHeroes
     config.paths["db/seeds.rb"] = "data/db/seeds.rb"
 
     [
-      "web",
-      "web/controllers",
-      "web/controllers/concerns",
-      "web/responders",
-      "web/services",
+      "ui",
+      "ui/controllers",
+      "ui/serializers",
 
       "app",
       "app/utils",
       "app/entities",
-      "app/providers",
-      "app/use_cases",
 
       "data",
       "data/ar",
 
       "lib",
-      "lib/services",
-      "lib/errors",
-      "lib/workers",
-      "lib/jobs",
     ].each do |dir|
       config.autoload_paths   << "#{config.root}/#{dir}"
       config.eager_load_paths << "#{config.root}/#{dir}"
