@@ -1,3 +1,5 @@
+require "struct/paginated"
+
 class ARHeroRepo
   def transaction(&block)
     AR::Hero.transaction(&block)
@@ -5,7 +7,7 @@ class ARHeroRepo
 
   def replace_all_by(heroes)
     ar_heroes = heroes.map do |hero|
-      AR::Hero.new(hero.to_h)
+      AR::Hero.new(hero.to_h.except(:abilities))
     end
 
     AR::Hero.transaction(joinable: false, requires_new: true) do
@@ -27,11 +29,11 @@ class ARHeroRepo
       Hero.new(ar_hero.attributes.symbolize_keys)
     end
 
-    {
-      data: heroes,
+    Paginated.new(
+      collection: heroes,
       total: AR::Hero.count,
       page: page,
       per: per,
-    }
+    )
   end
 end

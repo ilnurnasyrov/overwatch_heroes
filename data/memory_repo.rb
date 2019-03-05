@@ -1,4 +1,4 @@
-require "entities/hero"
+require "struct/paginated"
 
 class MemoryRepo
   def initialize
@@ -21,12 +21,12 @@ class MemoryRepo
     left = (page - 1) * per
     right = left + per - 1
 
-    {
-      data: collection[left..right],
+    Paginated.new(
+      collection: collection[left..right],
       total: collection.count,
       page: page,
       per: per,
-    }
+    )
   end
 
   private

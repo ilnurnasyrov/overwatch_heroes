@@ -17,6 +17,7 @@ gem 'dry-auto_inject'
 gem 'httparty'
 
 gem 'activerecord-import'
+gem 'with_advisory_lock'
 
 group :development, :test do
   gem 'pry-rails'

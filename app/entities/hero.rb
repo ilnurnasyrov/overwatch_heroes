@@ -1,6 +1,7 @@
-require_relative "entity"
+require "utils/app_struct"
+require_relative "ability"
 
-class Hero < Entity
+class Hero < AppStruct
   attribute :id, Types::Strict::Integer
   attribute :armour, Types::Strict::Integer
   attribute :health, Types::Strict::Integer
@@ -8,7 +9,5 @@ class Hero < Entity
   attribute :real_name, Types::Strict::String
   attribute :shield, Types::Strict::Integer
 
-  # Hack that allows to use Hero inside of Ability
-  require_relative "ability"
   attribute :abilities, Types::Array.of(Ability).optional.default([])
 end

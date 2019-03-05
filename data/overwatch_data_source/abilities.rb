@@ -10,7 +10,10 @@ class OverwatchDataSource
 
     def to_a
       payload.fetch(:data).map do |ability_attrs|
-        Ability.new(ability_attrs)
+        Ability.new(
+          **ability_attrs,
+          hero_id: ability_attrs.fetch(:hero).fetch(:id)
+        )
       end
     end
 

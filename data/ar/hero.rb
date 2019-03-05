@@ -1,5 +1,5 @@
 module AR
   class Hero < ApplicationRecord
-    has_many :abilities
+    self.primary_key = :id
   end
 end

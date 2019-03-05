@@ -1,7 +1,7 @@
 require "dry/struct"
 require "dry/types"
 
-class Entity < Dry::Struct
+class AppStruct < Dry::Struct
   Types = Dry::Types.module
 
   def changed(**options)

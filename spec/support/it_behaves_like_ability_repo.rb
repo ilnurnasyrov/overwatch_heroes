@@ -16,8 +16,8 @@ def it_behaves_like_ability_repo(ability_repo)
 
     expect(
       ability_repo.paginate(page: 1, per: 1)
-    ).to eq(
-      data: [updated_first_ability],
+    ).to eq Paginated.new(
+      collection: [updated_first_ability],
       page: 1,
       per: 1,
       total: 2
@@ -25,8 +25,8 @@ def it_behaves_like_ability_repo(ability_repo)
 
     expect(
       ability_repo.paginate(page: 1, per: 2)
-    ).to eq(
-      data: [updated_first_ability, second_ability],
+    ).to eq Paginated.new(
+      collection: [updated_first_ability, second_ability],
       page: 1,
       per: 2,
       total: 2
@@ -34,8 +34,8 @@ def it_behaves_like_ability_repo(ability_repo)
 
     expect(
       ability_repo.paginate(page: 2, per: 1)
-    ).to eq(
-      data: [second_ability],
+    ).to eq Paginated.new(
+      collection: [second_ability],
       page: 2,
       per: 1,
       total: 2

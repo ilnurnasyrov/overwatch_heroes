@@ -34,8 +34,8 @@ def it_behaves_like_hero_repo(hero_repo)
 
     expect(
       hero_repo.paginate(page: 1, per: 1)
-    ).to eq(
-      data: [updated_first_hero],
+    ).to eq Paginated.new(
+      collection: [updated_first_hero],
       page: 1,
       per: 1,
       total: 2
@@ -43,8 +43,8 @@ def it_behaves_like_hero_repo(hero_repo)
 
     expect(
       hero_repo.paginate(page: 1, per: 2)
-    ).to eq(
-      data: [updated_first_hero, second_hero],
+    ).to eq Paginated.new(
+      collection: [updated_first_hero, second_hero],
       page: 1,
       per: 2,
       total: 2
@@ -52,8 +52,8 @@ def it_behaves_like_hero_repo(hero_repo)
 
     expect(
       hero_repo.paginate(page: 2, per: 1)
-    ).to eq(
-      data: [second_hero],
+    ).to eq Paginated.new(
+      collection: [second_hero],
       page: 2,
       per: 1,
       total: 2

@@ -1,5 +1,5 @@
 module AR
   class Ability < ApplicationRecord
-    belongs_to :hero
+    self.primary_key = :id
   end
 end

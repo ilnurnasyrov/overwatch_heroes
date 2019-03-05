@@ -15,23 +15,13 @@ RSpec.describe SynchronizeData, type: :unit do
   end
 
   it "saves heroes from source to repo" do
-    expect(hero_repo.paginate(page: 1, per: 1)).to eq(
-      data: [],
-      page: 1,
-      total: 0,
-      per: 1,
-    )
+    expect(hero_repo.paginate(page: 1).collection).to eq []
 
     synchronize_heroes.call
 
     heroes = data_source.heroes.to_a
 
-    expect(hero_repo.paginate(page: 1, per: 1)).to eq(
-      data: heroes,
-      page: 1,
-      total: 1,
-      per: 1,
-    )
+    expect(hero_repo.paginate(page: 1).collection).to eq heroes
   end
 
   it "saves abilities from source to repo" do
