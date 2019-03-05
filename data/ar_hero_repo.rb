@@ -19,7 +19,7 @@ class ARHeroRepo
   def find_by_id(id)
     ar_hero = AR::Hero.find_by(id: id)
 
-    Hero.new(ar_hero.attributes.symbolize_keys)
+    ar_hero && Hero.new(ar_hero.attributes.symbolize_keys)
   end
 
   def paginate(page: 1, per: 50)

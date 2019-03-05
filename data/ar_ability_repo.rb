@@ -1,3 +1,5 @@
+require "struct/paginated"
+
 class ARAbilityRepo
   def replace_all_by(abilities)
     ar_abilities = abilities.map do |ability|
@@ -16,16 +18,21 @@ class ARAbilityRepo
     Ability.new(ar_ability.attributes.symbolize_keys)
   end
 
-  def paginate(page: 1, per: 50)
+  def paginate(page: 1, per: 50, hero_id: nil)
     left = (page - 1) * per
 
-    abilities = AR::Ability.order(:id).offset(left).limit(per).map do |ar_ability|
+    relation = AR::Ability.order(:id)
+    relation = relation.where(hero_id: hero_id) if hero_id
+
+    total = relation.count
+
+    abilities = relation.offset(left).limit(per).map do |ar_ability|
       Ability.new(ar_ability.attributes.symbolize_keys)
     end
 
     Paginated.new(
       collection: abilities,
-      total: AR::Ability.count,
+      total: total,
       page: page,
       per: per,
     )

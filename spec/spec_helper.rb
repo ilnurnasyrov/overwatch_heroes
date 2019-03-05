@@ -1,5 +1,12 @@
 require "pry"
 require "vcr"
+require "dry/auto_inject"
+
+class AppContainer
+  extend Dry::Container::Mixin
+end
+
+Import = Dry::AutoInject(AppContainer)
 
 $LOAD_PATH << File.expand_path("../app", __dir__)
 $LOAD_PATH << File.expand_path("../data", __dir__)

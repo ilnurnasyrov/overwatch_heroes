@@ -15,6 +15,7 @@ gem 'dry-validation'
 gem 'dry-monads'
 gem 'dry-auto_inject'
 gem 'httparty'
+gem 'fast_jsonapi'
 
 gem 'activerecord-import'
 gem 'with_advisory_lock'
