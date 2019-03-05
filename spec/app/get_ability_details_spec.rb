@@ -9,7 +9,7 @@ RSpec.describe GetAbilityDetails do
 
   it "returns paginated collection of abilityes" do
     expect(
-      get_ability_details.call(id: second_ability.id)
+      get_ability_details.call(id: second_ability.id).value!
     ).to eq second_ability
   end
 end

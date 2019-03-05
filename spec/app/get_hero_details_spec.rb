@@ -9,7 +9,7 @@ RSpec.describe GetHeroDetails do
 
   it "returns paginated collection of heroes" do
     expect(
-      get_hero_details.call(id: second_hero.id)
+      get_hero_details.call(id: second_hero.id).value!
     ).to eq second_hero
   end
 end

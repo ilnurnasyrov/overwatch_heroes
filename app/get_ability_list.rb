@@ -1,8 +1,6 @@
-require "dry/monads/do"
-require "dry/monads/result"
+require "utils/use_case"
 
-class GetAbilityList
-  include Dry::Monads::Result::Mixin
+class GetAbilityList < UseCase
   include Dry::Monads::Do.for(:call)
   include Import[:ability_repo]
 

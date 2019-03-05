@@ -10,7 +10,7 @@ RSpec.describe GetAbilityList do
   it "returns paginated collection of heroes" do
     result = get_ability_list.call(page: 2, per: 1)
 
-    expect(result).to eq Paginated.new(
+    expect(result.value!).to eq Paginated.new(
       collection: [second_ability],
       page: 2,
       per: 1,

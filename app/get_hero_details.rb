@@ -1,8 +1,6 @@
-require "dry/monads/do"
-require "dry/monads/result"
+require "utils/use_case"
 
-class GetHeroDetails
-  include Dry::Monads::Result::Mixin
+class GetHeroDetails < UseCase
   include Dry::Monads::Do.for(:call)
   include Import[:hero_repo]
 
