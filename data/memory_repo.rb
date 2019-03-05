@@ -5,6 +5,10 @@ class MemoryRepo
     @collection = []
   end
 
+  def transaction
+    yield
+  end
+
   def replace_all_by(collection)
     @collection = collection.sort_by(&:id)
   end
