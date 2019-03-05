@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Launching app locally
 
-Things you may want to cover:
+```bash
+docker-compose up
+```
 
-* Ruby version
+## Structure of the project
 
-* System dependencies
+* `ui` contains controllers and serializers
+* `data` contains repositories and data source
+* `app` contains buisness logick
 
-* Configuration
+## Note
 
-* Database creation
+Requirements stated that i need to implement following endpoints:
 
-* Database initialization
+- /api/heros - hero list
+- /api/heros/{hero_id} - hero data
+- /api/heros/{hero_id}/abilities - hero ability list
+- /api/abilities/ - ability list
+- /api/abilities/{ability_id} - ability data
 
-* How to run the test suite
+I assumed that there must be typo and slightly changed endpoints:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- /api/v1/heroes - hero list
+- /api/v1/heroes/{hero_id} - hero data
+- /api/v1/heroes/{hero_id}/abilities - hero ability list
+- /api/v1/abilities/ - ability list
+- /api/v1/abilities/{ability_id} - ability data

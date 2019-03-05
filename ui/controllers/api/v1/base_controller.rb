@@ -10,11 +10,13 @@ module Api
           case error_result.first
           when :validation
             422
+          when :not_found
+            404
           else
             400
           end
 
-        render json: error_result.last, status: status
+        render json: { errors: error_result.last }, status: status
       end
     end
   end

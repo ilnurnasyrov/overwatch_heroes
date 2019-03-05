@@ -20,6 +20,8 @@ gem 'fast_jsonapi'
 gem 'activerecord-import'
 gem 'with_advisory_lock'
 
+gem 'whenever'
+
 group :development, :test do
   gem 'pry-rails'
 end
