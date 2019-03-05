@@ -16,6 +16,8 @@ gem 'dry-monads'
 gem 'dry-auto_inject'
 gem 'httparty'
 
+gem 'activerecord-import'
+
 group :development, :test do
   gem 'pry-rails'
 end
